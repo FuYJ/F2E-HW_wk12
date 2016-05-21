@@ -1,0 +1,301 @@
+@font-face {
+  font-family: 'Calibri';
+  src: url("./fonts/Calibri.ttf"); }
+@font-face {
+  font-family: 'SFNS';
+  src: url("./fonts/System San Francisco Display Regular.ttf"); }
+html {
+  font-family: 'Calibri';
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black; }
+
+.container {
+  width: 100%; }
+
+.group:after, .social_network_button:after, .footer:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.center, .social_network_bar_3_block {
+  text-align: center;
+  display: block;
+  float: left; }
+
+.header {
+  background-color: #fc813b; }
+  @media screen and (max-width: 768px) {
+    .header {
+      height: 45px;
+      padding: 5px; }
+      .header .social_network_bar {
+        display: none; }
+      .header .icon_menu {
+        height: 32px;
+        width: auto; }
+      .header .logo_petfinder {
+        height: 32px;
+        width: auto; }
+      .header .icon_find {
+        height: 32px;
+        width: auto; }
+      .header .nav_bar {
+        display: none; }
+      .header .social_network_bar_2 {
+        display: none; } }
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
+    .header {
+      padding-top: 32px;
+      height: 132px; }
+      .header .social_network_bar {
+        display: none; }
+      .header .icon_menu {
+        height: 70px;
+        width: auto; }
+      .header .logo_petfinder {
+        height: 70px;
+        width: auto; }
+      .header .icon_find {
+        display: none; }
+      .header .nav_bar {
+        display: none; } }
+  @media screen and (min-width: 1280px) {
+    .header {
+      padding-top: 32px;
+      height: 187px; }
+      .header .icon_menu_div {
+        display: none; }
+      .header .logo_petfinder {
+        margin-top: auto;
+        width: 260px; }
+      .header .icon_find {
+        display: none; }
+      .header .social_network_bar_2 {
+        display: none; } }
+
+#hamburger_menu_button, #find_button {
+  border-radius: 5px;
+  outline: none;
+  border: 0;
+  padding: 0;
+  background-color: inherit; }
+  #hamburger_menu_button:hover, #find_button:hover {
+    background-color: rgba(255, 255, 255, 0.5); }
+  #hamburger_menu_button:active, #find_button:active {
+    background-color: rgba(0, 0, 0, 0.1); }
+
+#social_network_bar {
+  display: block;
+  height: 52px;
+  margin-right: 16px;
+  float: right; }
+
+.social_network_button {
+  border-radius: 25px;
+  outline: none;
+  width: 52px;
+  height: 52px;
+  border: 0;
+  padding: 0;
+  margin-right: 25px;
+  background-color: inherit;
+  float: right; }
+  .social_network_button:hover {
+    background-color: rgba(255, 255, 255, 0.5); }
+  .social_network_button:active {
+    background-color: rgba(0, 0, 0, 0.1); }
+  @media screen and (max-width: 768px) {
+    .social_network_button {
+      width: auto;
+      height: auto;
+      margin: 10px auto;
+      float: none; } }
+
+.social_network_icon {
+  width: 52px;
+  height: 52px; }
+
+.social_network_bar_2 {
+  margin-top: 20px;
+  display: block;
+  text-align: left;
+  padding-right: 25px; }
+  .social_network_bar_2 .social_network_icon {
+    width: 45px;
+    height: 45px; }
+  .social_network_bar_2 .social_network_button {
+    margin-right: 15px;
+    width: 45px;
+    height: 45px; }
+
+.nav_bar {
+  max-height: 75px;
+  display: block;
+  float: left; }
+
+.nav_bar_2 {
+  height: 105px;
+  background-color: #c3d69b; }
+  @media screen and (max-width: 768px) {
+    .nav_bar_2 {
+      display: none; } }
+  @media screen and (min-width: 1280px) {
+    .nav_bar_2 {
+      display: none; } }
+
+.nav_bar_button, .new_pets_block_cell_text_button {
+  outline: none;
+  float: left;
+  width: 22.5%;
+  height: 60px;
+  font-size: 24pt;
+  font-weight: bold;
+  border: 2px solid #77933c;
+  border-radius: 5px;
+  background-color: #ebf1de;
+  box-sizing: border-box;
+  margin-top: 15px;
+  margin-right: 20px;
+  margin-bottom: 0; }
+  .nav_bar_button:hover, .new_pets_block_cell_text_button:hover {
+    background-color: #f8ffe6; }
+  .nav_bar_button:active, .new_pets_block_cell_text_button:active {
+    background-color: #c3d69b; }
+  .nav_bar_button a, .new_pets_block_cell_text_button a {
+    text-decoration: none;
+    color: #663333; }
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
+    .nav_bar_button, .new_pets_block_cell_text_button {
+      font-size: 22pt;
+      margin: 27px 0 27px 2%;
+      width: 22.5%;
+      height: 51px; } }
+
+.sliderbox {
+  background-color: #c3d69b; }
+  @media screen and (max-width: 768px) {
+    .sliderbox .sliderbox_pic_s {
+      width: 100%; }
+    .sliderbox .sliderbox_pic_m {
+      display: none; }
+    .sliderbox .sliderbox_pic_l {
+      display: none; } }
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
+    .sliderbox .sliderbox_pic_s {
+      display: none; }
+    .sliderbox .sliderbox_pic_m {
+      width: 100%; }
+    .sliderbox .sliderbox_pic_l {
+      display: none; } }
+  @media screen and (min-width: 1280px) {
+    .sliderbox .sliderbox_pic_s {
+      display: none; }
+    .sliderbox .sliderbox_pic_m {
+      display: none; }
+    .sliderbox .sliderbox_pic_l {
+      width: 95%;
+      margin: 30px 2.5%; } }
+
+.social_network_bar_3 {
+  background-color: #c3d69b; }
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
+    .social_network_bar_3 {
+      display: none; } }
+  @media screen and (min-width: 1280px) {
+    .social_network_bar_3 {
+      display: none; } }
+
+.new_pets_block {
+  background-color: #ebf1de; }
+
+.new_pets_block_cell {
+  padding-top: 25px;
+  padding-bottom: 15px;
+  float: left; }
+
+.new_pets_block_cell_pic {
+  float: left; }
+  .new_pets_block_cell_pic .new_pets_block_cell_pic_img {
+    width: 100%; }
+
+.new_pets_block_cell_text {
+  margin-left: -10px;
+  padding-top: 10px;
+  float: left;
+  box-sizing: border-box;
+  text-align: left; }
+  .new_pets_block_cell_text h1 {
+    font-size: 2.4vw;
+    font-weight: bold;
+    line-height: 0.8em;
+    color: #663333;
+    margin: 0; }
+  .new_pets_block_cell_text h2 {
+    font-size: 1.8vw;
+    font-style: italic;
+    color: #943f43;
+    line-height: 1em;
+    margin-bottom: 0; }
+  .new_pets_block_cell_text p {
+    font-size: 1.8vw;
+    word-break: break-word;
+    color: #666663;
+    margin-top: 30px; }
+  @media screen and (max-width: 768px) {
+    .new_pets_block_cell_text {
+      padding-top: 0; }
+      .new_pets_block_cell_text h1 {
+        font-size: 6vw;
+        line-height: 1.2em; }
+      .new_pets_block_cell_text h2 {
+        font-size: 5vw; }
+      .new_pets_block_cell_text p {
+        display: none; } }
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
+    .new_pets_block_cell_text {
+      padding-top: 0; }
+      .new_pets_block_cell_text h1 {
+        font-size: 6vw;
+        line-height: 1em; }
+      .new_pets_block_cell_text h2 {
+        font-size: 3vw;
+        line-height: 1.5em; }
+      .new_pets_block_cell_text p {
+        font-size: 3vw; } }
+
+.new_pets_block_cell_text_button {
+  margin-top: 5%;
+  font-size: 4vw;
+  font-weight: normal;
+  background-color: #c4d59d;
+  border-color: #77933c;
+  height: auto;
+  width: auto; }
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
+    .new_pets_block_cell_text_button {
+      display: none; } }
+  @media screen and (min-width: 1280px) {
+    .new_pets_block_cell_text_button {
+      display: none; } }
+
+.footer {
+  font-size: 18pt;
+  color: #ebf1de;
+  background-color: #fc813b;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 8%;
+  padding-right: 8%; }
+
+#footer_left {
+  font-size: 2.2vw;
+  float: left; }
+
+#footer_right {
+  font-size: 2.2vw;
+  float: right; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,372 @@
+@mixin xs {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin sm {
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+        @content;
+    }
+}
+@mixin lg {
+    @media screen and (min-width: 1280px) {
+        @content;
+    }
+}
+@font-face {
+    font-family: 'Calibri';
+    src: url('./fonts/Calibri.ttf');
+}
+@font-face {
+    font-family: 'SFNS';
+    src: url('./fonts/System San Francisco Display Regular.ttf');
+}
+html {
+    font-family: 'Calibri';
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(0, 0, 0);
+}
+.container {
+    width: 100%;
+}
+.group:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.center {
+    text-align: center;
+    display: block;
+    float: left;
+}
+.header {
+    background-color: rgb(252, 129, 59);
+    @include xs {
+        height: 45px;
+        padding: 5px;
+        .social_network_bar {
+            display: none;
+        }
+        .icon_menu {
+            height: 32px;
+            width: auto;
+        }
+        .logo_petfinder {
+            height: 32px;
+            width: auto;
+        }
+        .icon_find {
+            height: 32px;
+            width: auto;
+        }
+        .nav_bar {
+            display: none;
+        }
+        .social_network_bar_2 {
+            display: none;
+        }
+    }
+    @include sm {
+        padding-top: 32px;
+        height: 132px;
+        .social_network_bar {
+            display: none;
+        }
+        .icon_menu {
+            height: 70px;
+            width: auto;
+        }
+        .logo_petfinder {
+            height: 70px;
+            width: auto;
+        }
+        .icon_find {
+            display: none;
+        }
+        .nav_bar {
+            display: none;
+        }
+    }
+    @include lg {
+        padding-top: 32px;
+        height: 187px;
+        .icon_menu_div {
+            display: none;
+        }
+        .logo_petfinder {
+            margin-top: auto;
+            width: 260px;
+        }
+        .icon_find {
+            display: none;
+        }
+        .social_network_bar_2 {
+            display: none;
+        }
+    }
+}
+#hamburger_menu_button {
+    border-radius: 5px;
+outline: none;
+border: 0;
+padding: 0;
+background-color: inherit;
+&:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+&:active {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+}
+#find_button{
+    @extend #hamburger_menu_button;
+}
+#social_network_bar {
+    display: block;
+    height: 52px;
+    margin-right: 16px;
+    float: right;
+}
+.social_network_button {
+    border-radius: 25px;
+    outline: none;
+    width: 52px;
+    height: 52px;
+    border: 0;
+    padding: 0;
+    margin-right: 25px;
+    background-color: inherit;
+    float: right;
+    @extend .group;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    &:active {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    @include xs {
+    width: auto;
+    height: auto;
+    margin: 10px auto;
+    float: none;
+    }
+}
+.social_network_icon {
+    width: 52px;
+    height: 52px;
+}
+.social_network_bar_2 {
+    margin-top: 20px;
+    display: block;
+    text-align: left;
+    padding-right: 25px;
+    .social_network_icon {
+        width: 45px;
+        height: 45px;
+    }
+    .social_network_button {
+        margin-right: 15px;
+        width: 45px;
+        height: 45px;
+    }
+}
+.nav_bar {
+    max-height: 75px;
+    display: block;
+    float: left;
+}
+.nav_bar_2 {
+    height: 105px;
+    background-color: rgb(195, 214, 155);
+    @include xs {
+        display: none;
+    }
+    @include lg {
+        display: none;
+    }
+}
+.nav_bar_button {
+    outline: none;
+    float: left;
+    width: 22.5%;
+    height: 60px;
+    font-size: 24pt;
+    font-weight: bold;
+    border: 2px solid rgb(119, 147, 60);
+    border-radius: 5px;
+    background-color: rgb(235, 241, 222);
+    box-sizing: border-box;
+    margin-top: 15px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    &:hover {
+        background-color: rgb(248, 255, 230);
+    }
+    &:active {
+        background-color: rgb(195, 214, 155);
+    }
+    a {
+        text-decoration: none;
+        color: rgb(102, 51, 51);
+    }
+    @include sm {
+        font-size: 22pt;
+        margin: 27px 0 27px 2%;
+        width: 22.5%;
+        height: 51px;
+    }
+}
+.sliderbox {
+    background-color: rgb(195, 214, 155);
+    @include xs {
+        .sliderbox_pic_s {
+            width: 100%;
+        }
+        .sliderbox_pic_m {
+            display: none;
+        }
+        .sliderbox_pic_l {
+            display: none;
+        }
+    }
+    @include sm {
+        .sliderbox_pic_s {
+            display: none;
+        }
+        .sliderbox_pic_m {
+            width: 100%;
+        }
+        .sliderbox_pic_l {
+            display: none;
+        }
+    }
+    @include lg {
+        .sliderbox_pic_s {
+            display: none;
+        }
+        .sliderbox_pic_m {
+            display: none;
+        }
+        .sliderbox_pic_l {
+            width: 95%;
+            margin: 30px 2.5%;
+        }
+    }
+}
+.social_network_bar_3{
+    background-color: rgb(195, 214, 155);
+    @include sm {
+        display: none;
+    }
+    @include lg {
+        display: none;
+    }
+}
+.social_network_bar_3_block{
+@extend .center;
+}
+.new_pets_block {
+    background-color: rgb(235, 241, 222);
+}
+.new_pets_block_cell {
+    padding-top: 25px;
+    padding-bottom: 15px;
+    float: left;
+}
+.new_pets_block_cell_pic {
+    float: left;
+    .new_pets_block_cell_pic_img {
+        width: 100%;
+    }
+}
+.new_pets_block_cell_text {
+    margin-left: -10px;
+    padding-top: 10px;
+    float: left;
+    box-sizing: border-box;
+    text-align: left;
+    h1 {
+        font-size: 2.4vw;
+        font-weight: bold;
+        line-height: 0.8em;
+        color: rgb(102, 51, 51);
+        margin: 0;
+    }
+    h2 {
+        font-size: 1.8vw;
+        font-style: italic;
+        color: rgb(148, 63, 67);
+        line-height: 1em;
+        margin-bottom: 0;
+    }
+    p {
+        font-size: 1.8vw;
+        word-break: break-word;
+        color: rgb(102, 102, 99);
+        margin-top: 30px;
+    }
+    @include xs {
+        padding-top: 0;
+        h1 {
+            font-size: 6vw;
+            line-height: 1.2em;
+        }
+        h2 {
+            font-size: 5vw;
+        }
+        p {
+            display: none;
+        }
+    }
+    @include sm {
+        padding-top: 0;
+    h1 {
+        font-size: 6vw;
+        line-height: 1em;
+    }
+    h2 {
+        font-size: 3vw;
+        line-height: 1.5em;
+    }
+    p{
+        font-size: 3vw;
+    }
+    }
+}
+.new_pets_block_cell_text_button {
+    @extend .nav_bar_button;
+    margin-top: 5%;
+    font-size: 4vw;
+    font-weight: normal;
+    background-color: rgb(196, 213, 157);
+    border-color: rgb(119, 147, 60);
+    height: auto;
+    width: auto;
+    @include sm {
+        display: none;
+    }
+    @include lg {
+        display: none;
+    }
+}
+.footer {
+    font-size: 18pt;
+    color: rgb(235, 241, 222);
+    background-color: rgb(252, 129, 59);
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 8%;
+    padding-right: 8%;
+    @extend .group;
+}
+#footer_left {
+    font-size: 2.2vw;
+    float: left;
+}
+#footer_right {
+    font-size: 2.2vw;
+    float: right;
+}
