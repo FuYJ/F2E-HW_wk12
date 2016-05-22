@@ -9,6 +9,31 @@
     </head>
     <body>
         <div class="container">
+            <div class="hamburger_menu">
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#">Links</a>
+                    </li>
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Pet Adoption</a>
+                    </li>
+                    <li>
+                        <a href="#">Pet-care Topics</a>
+                    </li>
+                    <li>
+                        <a href="#">Corporate</a>
+                    </li>
+                </ul>
+            </div>
             <div class="row header">
                 <div class="social_network_bar group">
                     <button type="button" class="social_network_button"><img src="./res/icon_Twitter.png" alt="twitter" class="social_network_icon"/></button>
@@ -24,6 +49,7 @@
                         <img class="logo_petfinder" src="res/logo_petfinder.png" alt="pet finder"/>
                     </div>
                     <div class="col-xs-3 col-sm-4 col-lg-3 center">
+                        <input type="text" class="find_input form-control hide" placeholder="Search for pets">
                         <button type="button" id="find_button"><img class="icon_find" src="res/icon_find.png" alt="find"/></button>
                     </div>
                     <div class="col-sm-4 social_network_bar_2 group">
@@ -71,19 +97,19 @@
             </div>
             <!--sliderbox-->
             <div class="row">
-                    <div class="social_network_bar_3 group col-xs-12">
-                        <div class="row">
-                            <div class="col-xs-4 social_network_bar_3_block">
+                <div class="social_network_bar_3 group col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-4 social_network_bar_3_block">
                             <button type="button" class="social_network_button"><img src="./res/icon_Facebook.png" alt="facebook" class="social_network_icon"/></button>
-                            </div>
-                        <div class="col-xs-4 social_network_bar_3_block">
-                        <button type="button" class="social_network_button"><img src="./res/icon_Instagram.png" alt="instagram" class="social_network_icon"/></button>
                         </div>
                         <div class="col-xs-4 social_network_bar_3_block">
-                    <button type="button" class="social_network_button"><img src="./res/icon_Twitter.png" alt="twitter" class="social_network_icon"/></button>
+                            <button type="button" class="social_network_button"><img src="./res/icon_Instagram.png" alt="instagram" class="social_network_icon"/></button>
                         </div>
+                        <div class="col-xs-4 social_network_bar_3_block">
+                            <button type="button" class="social_network_button"><img src="./res/icon_Twitter.png" alt="twitter" class="social_network_icon"/></button>
                         </div>
                     </div>
+                </div>
             </div>
             <div class="row new_pets_block">
                 <div class="row">
@@ -103,8 +129,8 @@
                             </button>
                         </div>
                         <!--new_pets_block_cell_text-->
-                </div>
-                <!--new_pets_block_cell-->
+                    </div>
+                    <!--new_pets_block_cell-->
                     <div class="col-xs-12 col-sm-12 col-lg-6 new_pets_block_cell ">
                         <div class="new_pets_block_cell_pic col-xs-4 col-sm-4 col-lg-6">
                             <a href="#"><img class="new_pets_block_cell_pic_img" src="./res/bg_pets_dog1.png" alt="dog1"/></a>
@@ -121,8 +147,8 @@
                             </button>
                         </div>
                         <!--new_pets_block_cell_text-->
-                </div>
-                <!--new_pets_block_cell-->
+                    </div>
+                    <!--new_pets_block_cell-->
                     <div class="col-xs-12 col-sm-12 col-lg-6 new_pets_block_cell">
                         <div class="new_pets_block_cell_pic col-xs-4 col-sm-4 col-lg-6">
                             <a href="#"><img class="new_pets_block_cell_pic_img" src="./res/bg_pets_cat2.png" alt="dog1"/></a>
@@ -139,8 +165,8 @@
                             </button>
                         </div>
                         <!--new_pets_block_cell_text-->
-                </div>
-                <!--new_pets_block_cell-->
+                    </div>
+                    <!--new_pets_block_cell-->
                     <div class="col-xs-12 col-sm-12 col-lg-6 new_pets_block_cell">
                         <div class="new_pets_block_cell_pic col-xs-4 col-sm-4 col-lg-6">
                             <a href="#"><img class="new_pets_block_cell_pic_img" src="./res/bg_pets_dog2.png" alt="dog1"/></a>
@@ -162,6 +188,47 @@
                 <!--new_pets_block_cell-->
             </div>
             <!--new_pets_block-->
+            <div id="links_block" class="row">
+                <div class="links_block_cell col-lg-3">
+                    <div class="links_block_cell_title">ABOUT US</div>
+                    <a href="#">About Us</a>
+                    <a href="#">Help</a>
+                    <a href="#">Mobile Site & Apps</a>
+                    <a href="#">Petfinder Foundation</a>
+                    <a href="#">For Shelters</a>
+                    <a href="#">For Developers</a>
+                </div>
+                <!--links_block_cell-->
+                <div class="links_block_cell col-lg-3">
+                    <div class="links_block_cell_title">PET ADOPTION</div>
+                    <a href="#">Dog adoption</a>
+                    <a href="#">Cat adoption</a>
+                    <a href="#">Other pet adoption</a>
+                    <a href="#">Search adoption</a>
+                    <a href="#">Organizations</a>
+                    <a href="#">Pet-Adoption stories</a>
+                </div>
+                <!--links_block_cell-->
+                <div class="links_block_cell col-lg-3">
+                    <div class="links_block_cell_title">PET-CARE TOPICS</div>
+                    <a href="#">Dog Care</a>
+                    <a href="#">Dog Breeds</a>
+                    <a href="#">Cat Care</a>
+                    <a href="#">Cat Breeds</a>
+                    <a href="#">For Shelters</a>
+                    <a href="#">All Pet Care</a>
+                </div>
+                <!--links_block_cell-->
+                <div class="links_block_cell col-lg-3">
+                    <div class="links_block_cell_title">CORPORATE</div>
+                    <a href="#">Partnerships</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Careers</a>
+                </div>
+                <!--links_block_cell-->
+            </div>
+            <!--links_block-->
             <div class="footer row">
                 <div id="footer_left">
                     copyright&copy2016
@@ -170,9 +237,11 @@
                     Tel: (886-2) 2771-2171
                 </div>
             </div>
+            <!--footer-->
         </div>
         <!--container-->
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
-    </body>
+        <script src="js/script.js"></script>
+</body>
 </html>

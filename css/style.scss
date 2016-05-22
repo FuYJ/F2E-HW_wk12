@@ -23,13 +23,15 @@
 }
 html {
     font-family: 'Calibri';
-    max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(0, 0, 0);
 }
 .container {
     width: 100%;
+position: relative;
+    left: 0px;
+    top: 0px;
 }
 .group:after {
     content: "";
@@ -107,20 +109,64 @@ html {
         }
     }
 }
+.hamburger_menu {
+    position: absolute;
+    left: -50%;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(119, 147, 60);
+    top: 0;
+    z-index: 2;
+    float: left;
+    @extend .group;
+    @extend .center;
+    ul {
+        list-style-type: none;
+    }
+    li {
+        font-size: 6vw;
+        outline: none;
+        float: left;
+        height: auto;
+        width: 80%;
+        font-weight: bold;
+        border: 3px solid rgb(69, 87, 30);
+        border-radius: 5px;
+        background-color: rgb(235, 241, 222);
+        box-sizing: border-box;
+        margin-top: 15px;
+        margin-bottom: 0;
+        &:hover {
+            background-color: rgb(248, 255, 230);
+        }
+        &:active {
+            background-color: rgb(195, 214, 155);
+        }
+    }
+    a {
+        text-decoration: none;
+        color: rgb(102, 51, 51);
+    }
+    @include xs {
+        li{
+            font-size: 4.2vw;
+        }
+    }
+}
 #hamburger_menu_button {
     border-radius: 5px;
-outline: none;
-border: 0;
-padding: 0;
-background-color: inherit;
-&:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+    outline: none;
+    border: 0;
+    padding: 0;
+    background-color: inherit;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    &:active {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 }
-&:active {
-    background-color: rgba(0, 0, 0, 0.1);
-}
-}
-#find_button{
+#find_button {
     @extend #hamburger_menu_button;
 }
 #social_network_bar {
@@ -147,10 +193,10 @@ background-color: inherit;
         background-color: rgba(0, 0, 0, 0.1);
     }
     @include xs {
-    width: auto;
-    height: auto;
-    margin: 10px auto;
-    float: none;
+        width: auto;
+        height: auto;
+        margin: 10px auto;
+        float: none;
     }
 }
 .social_network_icon {
@@ -255,7 +301,7 @@ background-color: inherit;
         }
     }
 }
-.social_network_bar_3{
+.social_network_bar_3 {
     background-color: rgb(195, 214, 155);
     @include sm {
         display: none;
@@ -264,8 +310,8 @@ background-color: inherit;
         display: none;
     }
 }
-.social_network_bar_3_block{
-@extend .center;
+.social_network_bar_3_block {
+    @extend .center;
 }
 .new_pets_block {
     background-color: rgb(235, 241, 222);
@@ -322,17 +368,17 @@ background-color: inherit;
     }
     @include sm {
         padding-top: 0;
-    h1 {
-        font-size: 6vw;
-        line-height: 1em;
-    }
-    h2 {
-        font-size: 3vw;
-        line-height: 1.5em;
-    }
-    p{
-        font-size: 3vw;
-    }
+        h1 {
+            font-size: 6vw;
+            line-height: 1em;
+        }
+        h2 {
+            font-size: 3vw;
+            line-height: 1.5em;
+        }
+        p {
+            font-size: 3vw;
+        }
     }
 }
 .new_pets_block_cell_text_button {
@@ -351,15 +397,53 @@ background-color: inherit;
         display: none;
     }
 }
+#links_block {
+    padding-left: 47px;
+    padding-bottom: 35px;
+    background-color: rgb(195, 214, 155);
+    box-sizing: border-box;
+    @include xs {
+        display: none;
+    }
+    @include sm {
+        display: none;
+    }
+}
+.links_block_cell {
+    float: left;
+    padding-top: 35px;
+    a {
+        color: rgb(102, 102, 99);
+        text-decoration: none;
+        font-size: 18pt;
+        margin-top: 18px;
+        display: block;
+        text-align: left;
+        &:hover {
+            color: rgb(150, 150, 110);
+            text-decoration: none;
+            font-size: 24px;
+            margin-top: 20px;
+            display: block;
+            text-align: center;
+        }
+    }
+}
+.links_block_cell_title {
+    color: rgb(102, 51, 51);
+    font-size: 20pt;
+    font-weight: bold;
+    width: 279px;
+    height: 40px;
+    text-align: left;
+    border-bottom: 2px solid rgb(102, 51, 51);
+}
 .footer {
     font-size: 18pt;
     color: rgb(235, 241, 222);
     background-color: rgb(252, 129, 59);
     box-sizing: border-box;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 8%;
-    padding-right: 8%;
+    padding: 20px 8%;
     @extend .group;
 }
 #footer_left {
